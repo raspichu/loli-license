@@ -15,14 +15,35 @@
         <div class="col-12">
             <table class="table table-sm table-bordered">
                 <tr>
+                    <th class="text-center">Card Image (970x600)</th>
                     <th class="text-center">Picture (325x460)</th>
-                    <th class="text-center">QR (174x174)</th>
+                    <th class="text-center">QR (175x175)</th>
+                    <th class="text-center">Number</th>
                 </tr>
-                <td>
+                <td class="text-center">
+                    <button class="btn btn-secondary btn-block" onclick="resetImage('card')">Reset</button>
+                    <br>
+                    <input type="file" name="" id="card_image">
+                </td>
+                <td class="text-center">
+                    <button class="btn btn-secondary btn-block" onclick="removeImage('profile')">Delete</button>
+                    <br>
                     <input type="file" name="" id="profile_pic">
                 </td>
-                <td>
+                <td class="text-center">
+                    <div class="row">
+                        <div class="col-6">
+                            <button class="btn btn-secondary btn-block" onclick="resetImage('qr')">Reset</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-secondary btn-block" onclick="removeImage('qr')">Delete</button>
+                        </div>
+                    </div>
+                    <br>
                     <input type="file" name="" id="qr_pic">
+                </td>
+                <td class="text-center">
+                    <button class="btn btn-secondary" onclick="regenerateNumber()">Regenerate numbers</button>
                 </td>
             </table>
         </div>
